@@ -3,15 +3,37 @@ package com.hsbc.student.utility;
 public class StudentDetails {
 	
 	// all the variable below are instance variables
-	 private int RollNo;
+	 private int RollNo =0;
 	 private String StudName;
+	 private int MarksInEng;
+	 private int MarksInMaths;
+	 private int MarksInScience;
+	 private int total;
+	 private double percentage;
 	 
 	 
-	 /**
+//	 public StudentDetails(int rollNo, String studName, int marksInEng, int marksInMaths, int marksInScience, int total,
+//			double percentage) {
+//		super();
+//		RollNo = rollNo;
+//		StudName = studName;
+//		MarksInEng = marksInEng;
+//		MarksInMaths = marksInMaths;
+//		MarksInScience = marksInScience;
+//		this.total = total;
+//		this.percentage = percentage;
+//	}
+	/**
 	 * @return the rollNo
 	 */
 	public int getRollNo() {
 		return RollNo;
+	}
+	@Override
+	public String toString() {
+		return "StudentDetails [RollNo=" + RollNo + ", StudName=" + StudName + ", MarksInEng=" + MarksInEng
+				+ ", MarksInMaths=" + MarksInMaths + ", MarksInScience=" + MarksInScience + ", total=" + total
+				+ ", percentage=" + percentage + "]";
 	}
 	/**
 	 * @param rollNo the rollNo to set
@@ -31,9 +53,7 @@ public class StudentDetails {
 	public void setStudName(String studName) {
 		StudName = studName;
 	}
-	private int MarksInEng;
-	 private int MarksInMaths;
-	 private int MarksInScience;
+	
 	
 	/**
 	 * @return the marksInEng
@@ -71,4 +91,31 @@ public class StudentDetails {
 	public void setMarksInScience(int marksInScience) {
 		MarksInScience = marksInScience;
 	}
+	
+	
+	/**
+	 * @return the total
+	 */
+	public int getTotal() {
+		return total;
+	}
+	/**
+	 * @param total the total to set
+	 */
+	public void setTotal(int total) {
+		this.total = total;
+	}
+	/**
+	 * @return the percentage
+	 */
+	public double getPercentage() {
+		return percentage;
+	}
+	/**
+	 * @param percentage the percentage to set
+	 */
+	public void setPercentage(double percentage) {
+		this.percentage = percentage;
+	}
+	
 }
